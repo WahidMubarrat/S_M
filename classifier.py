@@ -56,7 +56,7 @@ def classify_ticket(message: str, locale: str = "en") -> dict:
     user_prompt = f"Locale: {locale}\nCustomer message: {message}"
 
     response = client.models.generate_content(
-        model="gemini-2.0-flash",
+        model="gemini-1.5-flash",
         contents=user_prompt,
         config={
             "system_instruction": SYSTEM_PROMPT,
